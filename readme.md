@@ -5,5 +5,5 @@
 https://github.com/user-attachments/assets/c337c504-88f8-4222-8251-43ff83035c29
 
 ## Credits: 
--Lain model: https://skfb.ly/o8xpQ
--Sky: https://ambientcg.com/view?id=EveningSkyHDRI046B
+- Lain model: https://skfb.ly/o8xpQ
+- Sky: https://ambientcg.com/view?id=EveningSkyHDRI046B
