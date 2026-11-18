@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://1dy083so7uf7"]
+
+[ext_resource type="Script" uid="uid://bcfw3lpn4xda" path="res://charcontroller.gd" id="1_1w5fl"]
+[ext_resource type="PackedScene" uid="uid://5mc6b2r2c5fa" path="res://lain/lain_chiquita.glb" id="1_smdrx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_drn5w"]
+radius = 0.35
+height = 1.25
+
+[node name="MyPlayer" type="Node3D" unique_id=364321009]
+
+[node name="CharacterBody" type="CharacterBody3D" parent="." unique_id=761582760]
+collision_layer = 16
+script = ExtResource("1_1w5fl")
+
+[node name="CharacterModel" parent="CharacterBody" unique_id=445195694 instance=ExtResource("1_smdrx")]
+unique_name_in_owner = true
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="Sketchfab_model" parent="CharacterBody/CharacterModel" index="0" unique_id=641246177]
+transform = Transform3D(-1, 8.742278e-08, 3.821371e-15, 0, -4.371139e-08, 1, 8.742278e-08, 1, 4.371139e-08, 0, 0, 0)
+
+[node name="LainChikita" parent="CharacterBody/CharacterModel/Sketchfab_model/1fc27be200e04fd9aa4b806264b59e25_fbx/RootNode" parent_id_path=PackedInt32Array(445195694, 2055184321) index="0" unique_id=877433766]
+transform = Transform3D(100, 0, 0, 0, -1.6292068e-05, 100, 0, -100, -1.6292068e-05, 35.7497, 0, 0)
+
+[node name="BoundingCapsule" type="CollisionShape3D" parent="CharacterBody" unique_id=1455794571]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.625, 0)
+shape = SubResource("CapsuleShape3D_drn5w")
+
+[node name="RotationTarget" type="Marker3D" parent="CharacterBody" unique_id=1243208378]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=1880639682]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot" unique_id=21774860]
+transform = Transform3D(1, 0, 0, 0, 0.9063077, 0.42261824, 0, -0.42261824, 0.9063077, 0, 0, 0)
+spring_length = 2.5
+margin = 0.1
+
+[node name="Camera" type="Camera3D" parent="CameraPivot/SpringArm3D" unique_id=1532171722]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.96592593, -0.25881907, 0, 0.25881907, 0.96592593, 0, -0.04334396, 2.5765767)
+
+[editable path="CharacterBody/CharacterModel"]

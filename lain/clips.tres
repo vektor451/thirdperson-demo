@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0w5h7j3a1pjh"]
+
+[resource]
+resource_name = "clips"
+cull_mode = 2
+albedo_color = Color(0.9063318, 0.7567007, 0, 1)
+roughness = 0.85510343

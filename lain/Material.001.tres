@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxe468w60nwck"]
+
+[ext_resource type="Texture2D" uid="uid://bxpxmynd6tc8d" path="res://lain/lain_chiquita_0.png" id="1_6vpfi"]
+
+[resource]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_texture = ExtResource("1_6vpfi")
+roughness = 0.8839238
+texture_filter = 5
+metadata/_gltf_primary_texture_coord = 0
